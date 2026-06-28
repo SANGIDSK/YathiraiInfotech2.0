@@ -14,7 +14,7 @@ const SOCIAL_LINKS = [
   },
   {
     label: 'Instagram',
-    href: 'https://www.instagram.com/yathirai._official/',
+    href: 'https://www.instagram.com/yathiraiofficial?igsh=MWl1dWdobG0wbm96Ng==',
   },
 ];
 
