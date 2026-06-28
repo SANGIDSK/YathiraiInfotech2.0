@@ -11,7 +11,10 @@ function AdminLogin() {
   const handleSubmit = async () => {
     setLoading(true); setError('');
     try {
-      const res = await axios.post('/api/auth/login', form);
+      const res = await axios.post(
+  'https://yathiraiinfotech2-0.onrender.com/api/auth/login',
+  form
+);
       localStorage.setItem('adminToken', res.data.token);
       localStorage.setItem('adminUser', res.data.username);
       navigate('/admin/dashboard');
