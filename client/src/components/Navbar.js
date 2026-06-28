@@ -27,9 +27,17 @@ function Navbar({ onEnquire, showNav = true }) {
               <Link to="/courses" className="course-nav-btn">Courses</Link>
             </>
           )}
-          <button className="talk-btn" onClick={onEnquire}>
-            Enquire Now
-          </button>
+          <button
+  className="talk-btn"
+  onClick={() =>
+    window.open(
+      "https://wa.me/918807711644?text=Hi%20Yathirai%20InfoTech,%20I'm%20interested%20in%20your%20courses.%20Please%20share%20more%20details.",
+      "_blank"
+    )
+  }
+>
+  Enquire Now
+</button>
         </div>
       </header>
 
