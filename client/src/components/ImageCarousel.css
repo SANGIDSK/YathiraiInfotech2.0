@@ -1,0 +1,347 @@
+/* ===========================================
+   RESPONSIVE IMAGE GALLERY CAROUSEL STYLES
+   =========================================== */
+
+/* Main carousel container */
+.image-carousel {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Carousel container with overflow hidden */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, rgba(157, 78, 221, 0.1), rgba(255, 122, 24, 0.1));
+}
+
+/* Carousel track - horizontal flex layout */
+.carousel-track {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  /* Smooth sliding animation is applied via inline styles */
+  will-change: transform; /* Performance optimization */
+}
+
+/* Individual carousel slides */
+.carousel-slide {
+  flex: 0 0 100%; /* Each slide takes full width */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0; /* Prevent flex item from overflowing */
+}
+
+/* Carousel images */
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.carousel-image:hover {
+  transform: scale(1.02);
+}
+
+/* Carousel overlay for titles */
+.carousel-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.7) 50%,
+    rgba(0, 0, 0, 0.3) 70%,
+    transparent 100%
+  );
+  padding: 40px 30px 30px;
+  color: white;
+  backdrop-filter: blur(5px);
+}
+
+.carousel-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.5px;
+}
+
+.carousel-counter {
+  font-size: 14px;
+  opacity: 0.9;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Navigation buttons */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  color: #333;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.carousel-nav:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.carousel-nav:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.carousel-nav-prev {
+  left: 20px;
+}
+
+.carousel-nav-next {
+  right: 20px;
+}
+
+/* Pagination dots */
+.carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.carousel-dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: scale(1.2);
+}
+
+.carousel-dot.active {
+  background: white;
+  border-color: white;
+  transform: scale(1.3);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Auto-play indicator */
+.autoplay-indicator {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.autoplay-btn {
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  color: white;
+  font-size: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
+}
+
+.autoplay-btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: scale(1.1);
+}
+
+/* ===========================================
+   RESPONSIVE DESIGN
+   =========================================== */
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+  .carousel-container {
+    height: 400px;
+  }
+
+  .carousel-nav {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .carousel-overlay {
+    padding: 30px 20px 20px;
+  }
+
+  .carousel-title {
+    font-size: 20px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 300px;
+    border-radius: 10px;
+  }
+
+  .carousel-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    left: 10px;
+    right: 10px;
+  }
+
+  .carousel-nav-prev {
+    left: 10px;
+  }
+
+  .carousel-nav-next {
+    right: 10px;
+  }
+
+  .autoplay-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .carousel-overlay {
+    padding: 20px 15px 15px;
+  }
+
+  .carousel-title {
+    font-size: 18px;
+  }
+
+  .carousel-counter {
+    font-size: 12px;
+  }
+
+  .carousel-dots {
+    bottom: 15px;
+    gap: 8px;
+  }
+
+  .carousel-dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+  .carousel-container {
+    height: 250px;
+  }
+
+  .carousel-nav {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .carousel-overlay {
+    padding: 15px 12px 12px;
+  }
+
+  .carousel-title {
+    font-size: 16px;
+  }
+}
+
+/* ===========================================
+   ACCESSIBILITY & PERFORMANCE
+   =========================================== */
+
+/* Focus styles for keyboard navigation */
+.carousel-nav:focus,
+.carousel-dot:focus,
+.autoplay-btn:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track {
+    transition: none !important;
+  }
+
+  .carousel-image,
+  .carousel-nav,
+  .carousel-dot,
+  .autoplay-btn {
+    transition: none !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .carousel-nav {
+    background: white;
+    border: 2px solid black;
+    color: black;
+  }
+
+  .carousel-dot {
+    border-color: white;
+  }
+
+  .carousel-dot.active {
+    background: white;
+    border-color: black;
+  }
+}
+
+/* Print styles */
+@media print {
+  .carousel-nav,
+  .carousel-dots,
+  .autoplay-indicator {
+    display: none !important;
+  }
+
+  .carousel-container {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+}

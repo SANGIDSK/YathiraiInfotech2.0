@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <rect width="1200" height="900" rx="36" fill="#f4f8fb"/>
+  <rect x="70" y="80" width="1060" height="740" rx="32" fill="#ffffff"/>
+  <rect x="120" y="140" width="960" height="220" rx="28" fill="#0f4c81"/>
+  <circle cx="330" cy="360" r="120" fill="#f6c96f"/>
+  <path d="M300 340l27 27 62-70" stroke="#0f4c81" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="520" y="320" width="430" height="160" rx="24" fill="#7bd7c5"/>
+  <rect x="140" y="540" width="280" height="140" rx="24" fill="#dcefff"/>
+  <rect x="460" y="540" width="280" height="140" rx="24" fill="#e9f8f4"/>
+  <rect x="780" y="540" width="220" height="140" rx="24" fill="#0f4c81"/>
+  <text x="120" y="760" fill="#0f4c81" font-family="Segoe UI, Arial, sans-serif" font-size="48" font-weight="700">Achievement Celebration</text>
+  <text x="120" y="812" fill="#4f6d86" font-family="Segoe UI, Arial, sans-serif" font-size="28">Recognizing learning, effort, and visible progress</text>
+</svg>
