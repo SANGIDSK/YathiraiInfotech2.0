@@ -47,7 +47,7 @@ function Footer() {
           <h2>Contact</h2>
           <a href="mailto:yathirai.in@gmail.com">yathirai.in@gmail.com</a>
           <a href="tel:+918807711644">+91 88077 11644</a>
-          <address>NSC Bose 2nd Cross Street,<br />Kavangarai, Chennai 600066</address>
+          <address>M.A.Nagar, Red Hills, Padiyanallur,<br /> Chennai, Tamil Nadu 600052</address>
           <nav className="footer-social-links" aria-label="Yathirai social media">
             {SOCIAL_LINKS.map(link => (
               <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
