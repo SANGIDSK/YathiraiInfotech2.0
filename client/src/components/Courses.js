@@ -17,7 +17,7 @@ function Courses() {
   const [showEnquiry, setShowEnquiry] = useState(false);
 
   useEffect(() => {
-    axios.get('/api/courses')
+    axios.get('https://yathiraiinfotech2-0.onrender.com/api/courses')
       .then(res => setCourses(res.data))
       .catch(() => setCourses([]))
       .finally(() => setLoading(false));
