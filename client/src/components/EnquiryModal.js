@@ -22,7 +22,10 @@ function EnquiryModal({ onClose, defaultCourse = '', defaultMessage = '' }) {
     setError('');
     setSuccess('');
     try {
-      const response = await axios.post('/api/enquiry', form);
+      const response = await axios.post(
+  'https://yathiraiinfotech2-0.onrender.com/api/enquiry',
+  form
+);
       const emailSent = response.data?.emailSent;
       const autoReplySent = response.data?.autoReplySent;
       const message = emailSent
